@@ -3,6 +3,6 @@
   "description": "Use onboarding config preset used for @reservoir-data repositories",
   "onboardingConfig": {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": ["github>reservoir-data/.github"]
+    "extends": ["reservoir-data/.github//.github/renovate.json5"]
   }
 }
