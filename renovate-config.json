@@ -4,5 +4,6 @@
   "onboardingConfig": {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": ["reservoir-data/.github//.github/renovate.json5"]
-  }
+  },
+  "onboardingConfigFileName": ".github/renovate.json5"
 }
