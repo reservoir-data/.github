@@ -22,6 +22,9 @@
     "customManagers:githubActionsVersions"
   ],
 
+  // https://docs.renovatebot.com/configuration-options/#assigneesfromcodeowners
+  "assigneesFromCodeOwners": true,
+
   // https://docs.renovatebot.com/configuration-options/#labels
   "labels": ["dependencies"],
 
