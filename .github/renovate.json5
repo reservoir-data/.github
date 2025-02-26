@@ -43,5 +43,13 @@
   // https://docs.renovatebot.com/modules/manager/copier
   "copier": {
     "enabled": false
-  }
+  },
+
+  // https://docs.renovatebot.com/configuration-options/#packagerules
+  "packageRules": [
+    {
+      "matchPackageNames": ["actions/upload-artifact", "actions/download-artifact"],
+      "groupName": "GitHub artifact actions",
+    },
+  ],
 }
