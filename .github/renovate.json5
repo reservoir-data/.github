@@ -40,6 +40,9 @@
     "schedule": ["* * * * 0,6"]
   },
 
+  // https://docs.renovatebot.com/configuration-options/#minimumreleaseage
+  "minimumReleaseAge": 7,
+
   // https://docs.renovatebot.com/modules/manager/copier
   "copier": {
     "enabled": false
