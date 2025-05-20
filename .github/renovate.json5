@@ -46,6 +46,9 @@
   // https://docs.renovatebot.com/configuration-options/#minimumreleaseage
   "minimumReleaseAge": "14 days",
 
+  // https://docs.renovatebot.com/configuration-options/#separateminorpatch
+  "separateMinorPatch": true,
+
   // https://docs.renovatebot.com/modules/manager/copier
   "copier": {
     "enabled": false
