@@ -49,6 +49,9 @@
   // https://docs.renovatebot.com/configuration-options/#separateminorpatch
   "separateMinorPatch": true,
 
+  // https://docs.renovatebot.com/configuration-options/#separatemultipleminor
+  "separateMultipleMinor": true,
+
   // https://docs.renovatebot.com/modules/manager/copier
   "copier": {
     "enabled": false
