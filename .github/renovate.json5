@@ -68,5 +68,9 @@
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
       "automerge": true,
     },
+    {
+      "matchPackageNames": ["uv", "astral-sh/uv-pre-commit"],
+      "groupName": "uv-version",
+    },
   ],
 }
