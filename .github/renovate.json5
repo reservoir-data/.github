@@ -34,6 +34,9 @@
   // https://docs.renovatebot.com/configuration-options/#schedule
   "schedule": ["* 12-18 10 * *"],
 
+  // https://docs.renovatebot.com/configuration-options/#automergeschedule
+  "automergeSchedule": ["0 7-9 * * 3"].
+
   // https://docs.renovatebot.com/configuration-options/#platformautomerge
   "platformAutomerge": true,
 
