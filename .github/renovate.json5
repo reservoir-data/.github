@@ -75,5 +75,9 @@
       "matchPackageNames": ["uv", "astral-sh/uv-pre-commit"],
       "groupName": "uv-version",
     },
+    {
+      "matchPackageNames": ["tox", "tox-uv"],
+      "groupName": "Tox packages",
+    },
   ],
 }
