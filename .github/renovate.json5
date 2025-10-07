@@ -16,7 +16,7 @@
     ":rebaseStalePrs",
 
     // https://docs.renovatebot.com/presets-default/#automergepatch
-    ":automergePatch",
+    ":automergeMinor",
 
     // https://docs.renovatebot.com/presets-customManagers/#custommanagersgithubactionsversions
     "customManagers:githubActionsVersions"
@@ -48,12 +48,6 @@
 
   // https://docs.renovatebot.com/configuration-options/#minimumreleaseage
   "minimumReleaseAge": "3 days",
-
-  // https://docs.renovatebot.com/configuration-options/#separateminorpatch
-  "separateMinorPatch": true,
-
-  // https://docs.renovatebot.com/configuration-options/#separatemultipleminor
-  "separateMultipleMinor": true,
 
   // https://docs.renovatebot.com/modules/manager/copier
   "copier": {
@@ -87,6 +81,11 @@
     {
       "matchPackageNames": ["tox", "tox-uv"],
       "groupName": "Tox packages",
+    },
+    {
+      "matchPackageNames": ["singer-sdk"],
+      "groupName": "Singer SDK",
+      "automerge": false,
     },
   ],
 }
