@@ -79,7 +79,7 @@
       "groupName": "uv-version",
     },
     {
-      "matchPackageNames": ["tox", "tox-uv"],
+      "matchPackageNames": ["tox", "tox-uv", "tox-gh"],
       "groupName": "Tox packages",
     },
     {
