@@ -76,7 +76,8 @@
     },
     {
       "matchPackageNames": ["uv", "astral-sh/uv-pre-commit"],
-      "groupName": "uv-version",
+      "groupName": "astral-sh/uv",
+      "groupSlug": "uv-version",
     },
     {
       "matchPackageNames": ["tox", "tox-uv", "tox-gh"],
@@ -85,6 +86,7 @@
     {
       "matchPackageNames": ["singer-sdk"],
       "groupName": "Singer SDK",
+      "groupSlug": "singer-sdk",
       "automerge": false,
     },
   ],
