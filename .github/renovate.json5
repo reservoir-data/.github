@@ -34,6 +34,9 @@
   // https://docs.renovatebot.com/configuration-options/#schedule
   "schedule": ["* 16-18 * * 1"],
 
+  // https://docs.renovatebot.com/configuration-options/#prconcurrentlimit
+  "prConcurrentLimit": 3,
+
   // https://docs.renovatebot.com/configuration-options/#automergeschedule
   "automergeSchedule": ["* 7-9 * * 3"],
 
