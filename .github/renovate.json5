@@ -44,7 +44,6 @@
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": ["* 14-20 * * 5"],
-    "timezone": "America/Mexico_City",
   },
 
   // https://docs.renovatebot.com/configuration-options/#minimumreleaseage
@@ -96,7 +95,6 @@
       "groupName": "Singer SDK",
       "groupSlug": "singer-sdk",
       "automerge": false,
-      "timezone": "America/Mexico_City",
       "schedule": ["* * * * *"],
     },
   ],
