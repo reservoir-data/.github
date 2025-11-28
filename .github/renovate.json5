@@ -32,7 +32,7 @@
   "timezone": "America/Mexico_City",
 
   // https://docs.renovatebot.com/configuration-options/#schedule
-  "schedule": ["* * 1-3 * *"],
+  "schedule": ["* * 1-7 * 0,6"],
 
   // https://docs.renovatebot.com/configuration-options/#prconcurrentlimit
   "prConcurrentLimit": 3,
@@ -43,7 +43,8 @@
   // https://docs.renovatebot.com/configuration-options/#lockfilemaintenance
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["* 7-9 * * 1"]
+    "schedule": ["* 14-20 * * 5"],
+    "timezone": "America/Mexico_City",
   },
 
   // https://docs.renovatebot.com/configuration-options/#minimumreleaseage
@@ -57,10 +58,12 @@
   // https://docs.renovatebot.com/configuration-options/#packagerules
   "packageRules": [
     {
+      "description": "Group GitHub upload & download artifact actions",
       "matchPackageNames": ["actions/upload-artifact", "actions/download-artifact"],
       "groupName": "GitHub artifact actions",
     },
     {
+      "description": "Group other minor and patch updates to GitHub Actions",
       "matchManagers": ["github-actions"],
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "Minor and patch updates to GitHub Actions",
@@ -68,6 +71,7 @@
       "automerge": true,
     },
     {
+      "description": "Group minor and patch updates to pre-commit hooks",
       "matchManagers": ["pre-commit"],
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "Minor and patch updates to pre-commit hooks",
@@ -75,20 +79,25 @@
       "automerge": true,
     },
     {
+      "description": "Group uv and uv-pre-commit",
       "matchPackageNames": ["uv", "astral-sh/uv-pre-commit"],
       "groupName": "astral-sh/uv",
       "groupSlug": "uv-version",
     },
     {
+      "description": "Group tox and its plugins",
       "matchPackageNames": ["tox", "tox-uv", "tox-gh"],
       "groupName": "Tox packages",
       "groupSlug": "tox-packages",
     },
     {
+      "description": "Singer SDK updates",
       "matchPackageNames": ["singer-sdk"],
       "groupName": "Singer SDK",
       "groupSlug": "singer-sdk",
       "automerge": false,
+      "timezone": "America/Mexico_City",
+      "schedule": ["* * * * *"],
     },
   ],
 }
