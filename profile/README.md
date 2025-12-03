@@ -13,8 +13,6 @@
 
 ## Private [Singer][singer_spec] connectors
 
-1. [tap-streakcrm]: A Singer tap for extracting data from [Streak CRM][streak].
-
 1. [target-starrocks]: A loader for the [StarRocks][starrocks] analytical data warehouse.
 
 1. [target-firebase]: A loader for the [Google Cloud Firestore][firestore] databases associated with Firebase apps.
