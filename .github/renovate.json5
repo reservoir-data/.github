@@ -37,6 +37,9 @@
   // https://docs.renovatebot.com/configuration-options/#prconcurrentlimit
   "prConcurrentLimit": 3,
 
+  // https://docs.renovatebot.com/configuration-options/#prcreation
+  "prCreation": "not-pending",
+
   // https://docs.renovatebot.com/configuration-options/#platformautomerge
   "platformAutomerge": true,
 
