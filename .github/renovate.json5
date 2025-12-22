@@ -100,5 +100,10 @@
       "automerge": false,
       "schedule": ["* * * * *"],
     },
+    {
+      "description": "Disable minimum release age checks for lock file maintenance",
+      "matchUpdateTypes": ["lockFileMaintenance"],
+      "minimumReleaseAge": null
+    },
   ],
 }
