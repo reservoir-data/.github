@@ -99,6 +99,8 @@
       "groupSlug": "singer-sdk",
       "automerge": false,
       "schedule": ["* * * * *"],
+      "ignoreUnstable": false,
+      "respectLatest": false,
     },
     {
       "description": "Disable minimum release age checks for lock file maintenance",
