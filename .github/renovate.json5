@@ -101,6 +101,7 @@
       "schedule": ["* * * * *"],
       "ignoreUnstable": false,
       "respectLatest": false,
+      "minimumReleaseAge": "1 days",
     },
     {
       "description": "Disable minimum release age checks for lock file maintenance",
