@@ -68,6 +68,10 @@ categories:
         - 'performance'
 
 autolabeler:
+  # Dependabot PRs; Renovate PRs get this label from renovate.json5
+  - label: 'skip-changelog'
+    title:
+      - '/^chore\(deps\): Bump /'
   - label: 'breaking'
     title:
       - '/^([A-Za-z]+)(\(.+\))?!:/i'
