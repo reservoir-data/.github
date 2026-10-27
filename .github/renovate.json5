@@ -29,7 +29,7 @@
   "assigneesFromCodeOwners": true,
 
   // https://docs.renovatebot.com/configuration-options/#labels
-  "labels": ["dependencies"],
+  "labels": ["dependencies", "skip-changelog"],
 
   // https://docs.renovatebot.com/configuration-options/#timezone
   "timezone": "America/Mexico_City",
