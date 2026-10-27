@@ -1,0 +1,33 @@
+name: PR Labeler
+
+# Reusable workflow. Call it from a repository with:
+#
+#   on:
+#     pull_request_target:
+#       types: [opened, reopened, synchronize, edited]
+#   permissions: {}
+#   jobs:
+#     autolabel:
+#       permissions:
+#         pull-requests: write
+#       uses: reservoir-data/.github/.github/workflows/pr-labeler.yaml@main
+#
+# This never checks out or executes code from the PR, it only calls the labels API,
+# so it is safe to run on `pull_request_target`.
+
+on:
+  workflow_call:
+
+permissions: {}
+
+jobs:
+  autolabel:
+    name: Autolabel PR
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      pull-requests: write  # to autolabel PRs
+    steps:
+      - uses: release-drafter/release-drafter/autolabeler@978bb0b30c5ee8cdd332ced253758157150d43f0 # v7.10.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
