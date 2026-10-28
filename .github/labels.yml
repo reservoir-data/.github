@@ -1,0 +1,72 @@
+# Source of truth for labels in all @reservoir-data repositories.
+# Synced into each repository by the reusable `pr-labeler.yaml` workflow.
+# Labels are only created or updated, never deleted.
+
+# Release notes categories (see release-drafter.yml)
+- name: breaking
+  color: b60205
+  description: Breaking change
+- name: feature
+  color: 0e8a16
+  description: New feature
+- name: enhancement
+  color: a2eeef
+  description: New feature or request
+- name: fix
+  color: d73a4a
+  description: Bug fix
+- name: bug
+  color: d73a4a
+  description: Something isn't working
+- name: performance
+  color: fbca04
+  description: Performance improvement
+- name: changed
+  color: 1d76db
+  description: Change in existing behavior
+- name: documentation
+  color: 0075ca
+  description: Improvements or additions to documentation
+- name: internal
+  color: c5def5
+  description: Internal change with no user-facing impact
+- name: chore
+  color: ededed
+  description: Maintenance, CI, build or test changes
+- name: dependencies
+  color: 0366d6
+  description: Pull requests that update a dependency file
+- name: skip-changelog
+  color: ededed
+  description: Exclude from release notes
+
+# Applied by Renovate
+- name: python
+  color: 2b67c6
+  description: Pull requests that update Python code
+- name: python:uv
+  color: 2b67c6
+  description: Pull requests that update python:uv code
+- name: github_actions
+  color: "000000"
+  description: Pull requests that update GitHub Actions code
+
+# GitHub defaults
+- name: duplicate
+  color: cfd3d7
+  description: This issue or pull request already exists
+- name: good first issue
+  color: 7057ff
+  description: Good for newcomers
+- name: help wanted
+  color: "008672"
+  description: Extra attention is needed
+- name: invalid
+  color: e4e669
+  description: This doesn't seem right
+- name: question
+  color: d876e3
+  description: Further information is requested
+- name: wontfix
+  color: ffffff
+  description: This will not be worked on

@@ -12,6 +12,9 @@ name: PR Labeler
 #         pull-requests: write
 #       uses: reservoir-data/.github/.github/workflows/pr-labeler.yaml@main
 #
+# Before autolabeling, the labels defined in `.github/labels.yml` of this repository are
+# created or updated in the calling repository (existing labels are never deleted).
+#
 # This never checks out or executes code from the PR, it only calls the labels API,
 # so it is safe to run on `pull_request_target`.
 
@@ -28,6 +31,23 @@ jobs:
     permissions:
       pull-requests: write  # to autolabel PRs
     steps:
+      - name: Sync labels
+        # Don't block autolabeling if the labels can't be synced
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api repos/reservoir-data/.github/contents/.github/labels.yml \
+            -H 'Accept: application/vnd.github.raw+json' \
+            | yq -o=json '.[]' \
+            | jq -c . \
+            | while read -r label; do
+                gh label create "$(jq -r .name <<<"$label")" \
+                  --color "$(jq -r .color <<<"$label")" \
+                  --description "$(jq -r .description <<<"$label")" \
+                  --force --repo "$GITHUB_REPOSITORY"
+              done
+
       - uses: release-drafter/release-drafter/autolabeler@978bb0b30c5ee8cdd332ced253758157150d43f0 # v7.10.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
